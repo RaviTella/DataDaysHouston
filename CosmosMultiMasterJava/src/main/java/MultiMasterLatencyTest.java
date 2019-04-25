@@ -49,6 +49,7 @@ public class MultiMasterLatencyTest {
 
         ConnectionPolicy policy = new ConnectionPolicy();
         policy.setConnectionMode(ConnectionMode.Direct);
+        policy.setUsingMultipleWriteLocations(true);
         List<String> locations =new ArrayList<String>();
         locations.add(masterLocation);
         policy.setPreferredLocations(locations);
